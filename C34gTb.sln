@@ -8,9 +8,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		index.html = index.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6ADE7CD9-7FD8-4C04-89B4-A01F912ACA9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "styles", "styles", "{CA239F1B-DF39-4FA5-BEDB-265412149094}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6ADE7CD9-7FD8-4C04-89B4-A01F912ACA9A} = {182564C8-DBDE-4D7E-A5E7-EB289D49D8EE}
+		{CA239F1B-DF39-4FA5-BEDB-265412149094} = {182564C8-DBDE-4D7E-A5E7-EB289D49D8EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B07D320-E43E-4AF1-98E2-69298353ED8A}
