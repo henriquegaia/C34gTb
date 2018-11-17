@@ -1,4 +1,9 @@
 "use strict";
+
+$(document).ready(function(){
+    alert('jquery');
+});
+
 /////////////// Robots ///////////////////
 const Robot = class {
     constructor(canvas, sx, struct) {

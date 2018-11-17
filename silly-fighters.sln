@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{182564C8-DBDE-4D7E-A5E7-EB289D49D8EE}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
+		jquery-3.3.1.js = jquery-3.3.1.js
 		main.js = main.js
 		palette.js = palette.js
 		robot.js = robot.js
