@@ -1,29 +1,5 @@
 "use strict";
 //////////////////////////////////////////
-const canvas = {
-    init() {
-        this.elem = document.querySelector("canvas");
-        this.resize();
-        window.addEventListener("resize", () => this.resize(), false);
-        return this.elem.getContext("2d", { lowLatency: true });
-    },
-    resize() {
-        this.width = this.elem.width = this.elem.offsetWidth;
-        this.height = this.elem.height = this.elem.offsetHeight;
-        this.scale = Math.min(this.width, this.height) / 1100;
-        robots.forEach(robot => robot.resize(this.width, this.height, this.scale));
-    },
-    clear() {
-        ctx.fillStyle = backgroundColor;
-        ctx.fillRect(0, 0, this.width, this.height);
-        if (projectorColor !== backgroundColor) {
-            ctx.fillStyle = projectorColor;
-            ctx.beginPath();
-            ctx.arc(canvas.width * 0.5, canvas.height * 0.5, canvas.scale * 500, 0, 2 * Math.PI);
-            ctx.fill();
-        }
-    }
-};
 const robots = [];
 //////////////////////////////////////////
 const pointer = {
@@ -66,23 +42,6 @@ const ctx = canvas.init();
 pointer.init(canvas);
 sound.init();
 //////////////// female ///////////////////
-/*
-                +1 head
-                |
-                +0 neck 
-   arms       /   \         arms  
-4+----3+----2+-----+5----+6----+7 
-             | \ / |
-             |  /  | Body  
-             | / \ | 
-            8+-----+11  
-             |     |   legs up  
-             |     |  
-            9+     +12  
-             |     |   legs down 
-             |     |  
-           10+     +13 
-*/
 robots.push(
     new Robot(canvas, 0.45, {
         nodes: {
@@ -334,7 +293,7 @@ robots.push(
         }
     })
 );
-/////////////////// male ///////////////////////
+/////////////////// male //////////////////
 robots.push(
     new Robot(canvas, -0.45, {
         nodes: {
@@ -628,7 +587,7 @@ robots.push(
         }
     })
 );
-//////////////////////////////////////////
+///////////////////////////////////////////
 // loading textures
 const load = () => {
     let n = 0;
